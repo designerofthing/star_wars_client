@@ -17,7 +17,7 @@ describe("Visitor can view a list of characters", () => {
     cy.get("#header").find("img#logo").should("be.visible");
   });
   it("showns description text inside the header", () => {
-    cy.get("#header-text").should("contain", "View and search for your favourite Star Wars characters");
+    cy.get("#header").should("contain", "View and search for your favourite Star Wars characters");
   });
 
   it("shows a list of characters", () => {
