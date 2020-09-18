@@ -35,6 +35,12 @@ describe("Visitor can view a list of characters", () => {
   });
   it("shows the next page list of character on button click", () => {
     cy.get("#next-button").click();
+    cy.server();
+    cy.route({
+      method: "GET",
+      url: "https://swapi.dev/api/people/?page=2",
+      response: "fixture:response_page_2.json",
+    });
     cy.get("#character-list").should("contain", "Anakin Skywalker");
     cy.get("#character-list").should("contain", "Palpatine");
     cy.get("#previous-button").should("be.visible");

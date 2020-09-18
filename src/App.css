@@ -14,7 +14,18 @@
 }
 
 #character-list {
+  padding-top: 5vh;
   text-align: center;
+}
+
+#next-button {
+  color: yellow;
+  background-color: black;
+  border-radius: 1vh;
+  display: block;
+  float: right;
+  margin-top: 5vh;
+  margin-right: 30vw;
 }
 
 #footer {
