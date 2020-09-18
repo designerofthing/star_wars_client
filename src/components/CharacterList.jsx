@@ -8,19 +8,11 @@ const CharacterList = () => {
   const [nextButtonShow, setNextButtonShow] = useState("visible");
   const [showInfo, setShowInfo] = useState("none");
 
-  function getNextPage() {
-    setPageNumber(pageNumber + 1);
+  useEffect(() => {
     getNames();
-  }
+  }, [pageNumber]);
+  
 
-  function getPreviousPage() {
-    setPageNumber(pageNumber - 1);
-    getNames();
-  }
-
-  function displayInformation() {
-    showInfo === "none" ? setShowInfo("inline") : setShowInfo("none");
-  }
 
   const getNames = async () => {
     try {
@@ -38,10 +30,21 @@ const CharacterList = () => {
       console.log(error);
     }
   };
-
-  useEffect(() => {
+  
+  function getNextPage() {
+    setPageNumber(pageNumber + 1);
     getNames();
-  }, []);
+  }
+
+  function getPreviousPage() {
+    setPageNumber(pageNumber - 1);
+    getNames();
+  }
+
+  function displayInformation() {
+    showInfo === "none" ? setShowInfo("inline") : setShowInfo("none");
+  }
+  
 
   let characterNames = names.map((name) => {
     return (
@@ -61,7 +64,7 @@ const CharacterList = () => {
       <div id="character-list">{characterNames}</div>
       <button
         id="next-button"
-        onClick={() => getNextPage()}
+        onClick={getNextPage}
         style={{ visibility: nextButtonShow }}
       >
         Next
