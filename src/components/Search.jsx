@@ -32,7 +32,7 @@ const Search = () => {
       <div >
         <p className="search-results" id={name.name} onClick={displayInformation}>
           {name.name} <br />
-          <span id={name.name + "-info"} style={{ display: showInfo }}>
+          <span className="search-results-info" id={name.name + "-info"} style={{ display: showInfo }}>
             Height: {name.height}, Weight in kgs: {name.mass}, Hair colour:{" "}
             {name.hair_color}, Skin colour: {name.skin_color}{" "}
           </span>

@@ -49,9 +49,9 @@ const CharacterList = () => {
   let characterNames = names.map((name) => {
     return (
       <div>
-        <p id={name.name} onClick={displayInformation}>
+        <p className="character-names" id={name.name} onClick={displayInformation}>
           {name.name} <br />
-          <span id={name.name + "-info"} style={{ display: showInfo }}>
+          <span className="character-info" id={name.name + "-info"} style={{ display: showInfo }}>
             Height: {name.height}, Weight in kgs: {name.mass}, Hair colour:{" "}
             {name.hair_color}, Skin colour: {name.skin_color}{" "}
           </span>

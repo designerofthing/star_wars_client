@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
 #header {
   width: 100vw;
   height: 25vh;
   background-color: black;
   color: yellow;
   text-align: center;
+  font-family: 'Righteous', cursive;
 }
 
 #logo {
@@ -24,10 +28,13 @@
 #search-button {
   background-color: black;
   color: yellow;
+  cursor: pointer;
 }
 
 #view-list {
   text-align: center;
+  font-family: 'Righteous', cursive;
+  cursor: pointer;
 }
 
 #character-list, .search-results {
@@ -45,6 +52,8 @@
   margin-top: 1vh;
   margin-right: 30vw;
   margin-bottom: 1vh;
+  font-family: 'Righteous', cursive;
+  cursor: pointer;
 }
 
 #footer {
@@ -57,4 +66,13 @@
   background-color: black;
   color: yellow;
   text-align: center;
+}
+
+.search-results, .character-names {
+  font-family: 'Righteous', cursive;
+  font-size: large;
+}
+
+.character-info, .search-results-info {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
