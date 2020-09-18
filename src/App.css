@@ -18,14 +18,15 @@
   text-align: center;
 }
 
-#next-button {
+#next-button, #previous-button {
   color: yellow;
   background-color: black;
   border-radius: 1vh;
   display: block;
   float: right;
-  margin-top: 5vh;
+  margin-top: 1vh;
   margin-right: 30vw;
+  margin-bottom: 1vh;
 }
 
 #footer {
