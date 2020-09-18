@@ -7,6 +7,7 @@ describe("Visitor can view a list of characters", () => {
       response: "fixture:response.json",
     });
     cy.visit("/");
+    cy.get("#view-list").click();
   });
   it("showns a header and footer", () => {
     cy.get("#header").should("exist");

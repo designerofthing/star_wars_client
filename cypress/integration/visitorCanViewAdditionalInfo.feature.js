@@ -7,6 +7,7 @@ describe("Visitor can view additional information", () => {
       response: "fixture:response.json",
     });
     cy.visit("/");
+    cy.get("#view-list").click();
   });
 
   it("can click on characters name", () => {
